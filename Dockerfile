@@ -41,7 +41,7 @@ RUN cd $RBENV_ROOT \
   && git pull
 
 RUN eval "$(rbenv init -)" \
-  && rbenv install $RUBY_VERSION --force\
+  && rbenv install --force $RUBY_VERSION \
   && rbenv rehash \
   && rbenv global $RUBY_VERSION \
   && ls /usr/local -a \
