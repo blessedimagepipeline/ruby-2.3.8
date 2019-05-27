@@ -1,7 +1,7 @@
 FROM buildpack-deps:jessie-curl
 LABEL maintainer="Azure App Services Container Images <appsvc-images@microsoft.com>"
 
-RUN export RUBY_VERSION="2.3.8"
+ENV RUBY_VERSION="2.3.8"
 
 RUN echo "deb http://deb.debian.org/debian/ jessie main" > /etc/apt/sources.list \
  && echo "deb-src http://deb.debian.org/debian/ jessie main" >> /etc/apt/sources.list \
